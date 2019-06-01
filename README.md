@@ -18,17 +18,27 @@ sudo apt-get update
 
 ```
 sudo apt-get install python-smbus kakasi
+
 git clone https://github.com/Takazine/mpd_oled_ctrl.git
+
 cd mpd_oled_ctrl
+
 sudo chmod +x oled_ctrl_s.py
+
 sudo cp oled_ctrl.service /etc/systemd/system/oled_ctrl.service
 ```
+
+途中でパスワードを求められたら **volumio** と答えます。
+
+ [oled_ctrl.service](oled_ctrl.service) 
 
 つづいて、systemdに登録します。
 
 ```
 sudo systemctl enable oled_ctrl
 ```
+
+
 
 最後にI2C通信をイネーブルしておきます。
 
@@ -38,7 +48,7 @@ sudo systemctl enable oled_ctrl
 
 記載がなければテキストエディタで追記します。
 
-ここで再起動すると、OLEDに曲名が表示されます。
+ここでvolumio2を再起動すると、OLEDに曲名が表示されます。
 
 
 
@@ -48,6 +58,6 @@ sudo systemctl enable oled_ctrl
 
 RaspbianやMoode Audioへ登録するときはoled_ctrl.serviceの
 
-/home/**volumio**/oled_ctrl_s.py    を
-/home/**pi**/oled_ctrl_s.py         に変更します。　　
+/home/**volumio**/mpd_oled_ctrl/oled_ctrl_s.py    を
+/home/**pi**/mpd_oled_ctrl/oled_ctrl_s.py         に変更します。　　
 
