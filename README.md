@@ -30,7 +30,7 @@ sudo cp oled_ctrl.service /etc/systemd/system/oled_ctrl.service
 
 途中でパスワードを求められたら **volumio** と答えます。
 
- [oled_ctrl.service](oled_ctrl.service) 
+
 
 つづいて、systemdに登録します。
 
