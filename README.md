@@ -30,7 +30,7 @@ sudo cp oled_ctrl.service /etc/systemd/system/oled_ctrl.service
 
 途中でパスワードを求められたら **volumio** と答えます。
 
-
+ 
 
 つづいて、systemdに登録します。
 
@@ -38,7 +38,7 @@ sudo cp oled_ctrl.service /etc/systemd/system/oled_ctrl.service
 sudo systemctl enable oled_ctrl
 ```
 
-
+ 
 
 最後にI2C通信をイネーブルしておきます。
 
@@ -59,5 +59,6 @@ sudo systemctl enable oled_ctrl
 RaspbianやMoode Audioへ登録するときはoled_ctrl.serviceの
 
 /home/**volumio**/mpd_oled_ctrl/oled_ctrl_s.py    を
-/home/**pi**/mpd_oled_ctrl/oled_ctrl_s.py         に変更します。　　
+
+/home/**pi**/mpd_oled_ctrl/oled_ctrl_s.py         に変更します。
 
