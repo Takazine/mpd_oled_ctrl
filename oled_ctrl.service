@@ -1,4 +1,4 @@
-Unit]
+[Unit]
 Description=i2c OLED ctrl service
 
 [Service]
